@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · NourishHope</title>
+  <meta name="description" content="NourishHope — a food charity connecting donors, volunteers, and communities to reduce hunger and food waste." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script defer src="script.js"></script>
+</head>
+<body class="theme-dark">
+<div id="page-transition" class="page-transition"></div>
+<canvas id="bg-particles" aria-hidden="true"></canvas>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="NourishHope home">
+    <img src="assets/logo.svg" alt="" class="logo" />
+    <span class="brand-text">NourishHope</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul id="nav-menu" class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="request-help.html">Request Help</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <button id="theme-toggle" class="btn ghost small" aria-label="Toggle theme">🌓</button>
+    <a href="donate.html" class="btn primary">Donate</a>
+  </div>
+</header>
+<main>
+
+<section class="section container">
+  <h1 class="section-title">About NourishHope</h1>
+  <div class="grid two">
+    <div class="card">
+      <h3>Mission</h3>
+      <p>Reduce hunger and food waste by connecting surplus to need with speed and care.</p>
+      <h3>Values</h3>
+      <ul class="bullets">
+        <li>Dignity</li><li>Transparency</li><li>Safety</li><li>Community</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Team</h3>
+      <p>We’re a blend of logisticians, chefs, and technologists across India.</p>
+      <div class="chips">
+        <span class="chip">Operations</span>
+        <span class="chip">Kitchens</span>
+        <span class="chip">Field</span>
+        <span class="chip">Tech</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Transparency Ledger</h3>
+    <p>We publish program ratios, mock invoices, and monthly goals.</p>
+    <details>
+      <summary>View July (sample)</summary>
+      <ul class="bullets small">
+        <li>Meals funded: 22,500</li>
+        <li>Rescue operations: 145</li>
+        <li>Program allocation: 98%, Admin 2%</li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>About</h4>
+      <p>We rescue surplus food, fund fresh meals, and empower volunteers to serve communities with dignity.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="request-help.html">Request Help</a></li>
+        <li><a href="impact.html">Impact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter" data-form="newsletter">
+        <label class="sr-only" for="newsletter-email">Email</label>
+        <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required />
+        <button class="btn secondary" type="submit">Subscribe</button>
+        <p class="form-hint">No spam. Unsubscribe anytime.</p>
+      </form>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>📍 22 Community Lane, Care City<br/>☎️ +91 99999 00000<br/>✉️ hello@nourishhope.org</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram" class="chip">Instagram</a>
+        <a href="#" aria-label="Twitter" class="chip">Twitter</a>
+        <a href="#" aria-label="LinkedIn" class="chip">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <div class="progress-wrap">
+      <div class="progress-bar" id="scroll-progress"></div>
+    </div>
+    <p>© <span data-year></span> NourishHope · Built with kindness</p>
+  </div>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<button id="to-top" class="to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

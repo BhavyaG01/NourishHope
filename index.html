@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home · NourishHope</title>
+  <meta name="description" content="NourishHope — a food charity connecting donors, volunteers, and communities to reduce hunger and food waste." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script defer src="script.js"></script>
+</head>
+<body class="theme-dark">
+<div id="page-transition" class="page-transition"></div>
+
+<!-- 🔹 Canvas as background -->
+<canvas id="bg-particles" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="NourishHope home">
+    <img src="assets/logo.svg" alt="" class="logo" />
+    <span class="brand-text">NourishHope</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul id="nav-menu" class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="request-help.html">Request Help</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <button id="theme-toggle" class="btn ghost small" aria-label="Toggle theme">🌓</button>
+    <a href="donate.html" class="btn primary">Donate</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero section">
+  <div class="hero-content container">
+    <div class="hero-text reveal-up">
+      <h1 class="display">Turn Surplus into <span class="accent-gradient">Support</span></h1>
+      <p class="lead">Join a community fighting hunger with tech, empathy, and action. Donate, volunteer, or request help — all in a few clicks.</p>
+      <div class="hero-actions">
+        <a class="btn primary large" href="donate.html">Donate Now</a>
+        <a class="btn outline large" href="volunteer.html">Become a Volunteer</a>
+      </div>
+      <div class="metrics">
+        <div class="metric">
+          <div class="num" data-counter="mealCount" data-target="250000">0</div>
+          <div class="label">Meals Served</div>
+        </div>
+        <div class="metric">
+          <div class="num" data-counter="rescuedKg" data-target="120000">0</div>
+          <div class="label">Kg Food Rescued</div>
+        </div>
+        <div class="metric">
+          <div class="num" data-counter="volunteers" data-target="5800">0</div>
+          <div class="label">Active Volunteers</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-art reveal-up delay-1">
+      <div class="glass card stack-float">
+        <div class="stack">
+          <div class="stack-item">🥗</div>
+          <div class="stack-item">🥘</div>
+          <div class="stack-item">🍛</div>
+          <div class="stack-item">🍱</div>
+          <div class="stack-item">🫶</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">98%</div>
+          <div class="stat-label">to Programs</div>
+        </div>
+        <div class="pulse-badge">Real-time impact</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <h2 class="section-title reveal-up">How it works</h2>
+  <div class="grid how-it-works">
+    <div class="card reveal-up">
+      <h3>1. Rescue</h3>
+      <p>Partners alert us about surplus. Volunteers pick up and deliver safely.</p>
+      <button class="btn ghost small" data-tip="We follow FSSAI hygiene guidelines.">Safety Standards</button>
+    </div>
+    <div class="card reveal-up delay-1">
+      <h3>2. Fund</h3>
+      <p>Donations turn into fresh meals cooked by community kitchens.</p>
+      <a class="btn ghost small" href="impact.html">See Impact</a>
+    </div>
+    <div class="card reveal-up delay-2">
+      <h3>3. Serve</h3>
+      <p>We prioritize children, elders, and disaster-hit regions first.</p>
+      <a class="btn ghost small" href="events.html">Find Drives</a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt container">
+  <h2 class="section-title reveal-up">This week</h2>
+  <div class="grid three">
+    <article class="card reveal-up">
+      <h3>Community Kitchen Drive</h3>
+      <p>Cook + serve 500 meals in Dharavi. Shifts available.</p>
+      <a class="btn secondary" href="events.html#kitchen">Join a Shift</a>
+    </article>
+    <article class="card reveal-up delay-1">
+      <h3>Hotel Rescue Nights</h3>
+      <p>Collect safely packed surplus from partner hotels.</p>
+      <a class="btn secondary" href="volunteer.html#rescue">Sign up</a>
+    </article>
+    <article class="card reveal-up delay-2">
+      <h3>Back-to-School Kits</h3>
+      <p>Add ₹100 to fund nutrition kits for students.</p>
+      <a class="btn secondary" href="donate.html#kits">Donate ₹100</a>
+    </article>
+  </div>
+</section>
+
+<section class="section container">
+  <h2 class="section-title reveal-up">Stories</h2>
+  <div class="carousel" data-carousel>
+    <button class="carousel-btn prev" aria-label="Previous">‹</button>
+    <div class="carousel-track">
+      <figure class="carousel-item">
+        <img src="assets/story1.jpg" alt="Volunteers serving meals" />
+        <figcaption>“A rescued tray becomes 20 smiles.” — Aarti, volunteer</figcaption>
+      </figure>
+      <figure class="carousel-item">
+        <img src="assets/story2.jpg" alt="Donor-supported kitchen" />
+        <figcaption>“Donations keep our pots warm.” — Mohan, chef</figcaption>
+      </figure>
+      <figure class="carousel-item">
+        <img src="assets/story3.jpg" alt="Community line for meals" />
+        <figcaption>“Dignity first, then food.” — Saira, coordinator</figcaption>
+      </figure>
+    </div>
+    <button class="carousel-btn next" aria-label="Next">›</button>
+  </div>
+</section>
+
+<section class="section cta container">
+  <div class="cta-card reveal-up">
+    <h2>Ready to make an impact?</h2>
+    <p>Even small acts add up. Start where you are.</p>
+    <div class="cta-actions">
+      <a class="btn primary" href="donate.html">Donate</a>
+      <a class="btn outline" href="volunteer.html">Volunteer</a>
+      <a class="btn ghost" href="request-help.html">Request Help</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>About</h4>
+      <p>We rescue surplus food, fund fresh meals, and empower volunteers to serve communities with dignity.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="request-help.html">Request Help</a></li>
+        <li><a href="impact.html">Impact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter" data-form="newsletter">
+        <label class="sr-only" for="newsletter-email">Email</label>
+        <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required />
+        <button class="btn secondary" type="submit">Subscribe</button>
+        <p class="form-hint">No spam. Unsubscribe anytime.</p>
+      </form>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>📍 22 Community Lane, Care City<br/>☎️ +91 99999 00000<br/>✉️ hello@nourishhope.org</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram" class="chip">Instagram</a>
+        <a href="#" aria-label="Twitter" class="chip">Twitter</a>
+        <a href="#" aria-label="LinkedIn" class="chip">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <div class="progress-wrap">
+      <div class="progress-bar" id="scroll-progress"></div>
+    </div>
+    <p>© <span data-year></span> NourishHope · Built with kindness</p>
+  </div>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<button id="to-top" class="to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

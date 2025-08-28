@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · NourishHope</title>
+  <meta name="description" content="NourishHope — a food charity connecting donors, volunteers, and communities to reduce hunger and food waste." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script defer src="script.js"></script>
+</head>
+<body class="theme-dark">
+<div id="page-transition" class="page-transition"></div>
+<canvas id="bg-particles" aria-hidden="true"></canvas>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="NourishHope home">
+    <img src="assets/logo.svg" alt="" class="logo" />
+    <span class="brand-text">NourishHope</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul id="nav-menu" class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="request-help.html">Request Help</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <button id="theme-toggle" class="btn ghost small" aria-label="Toggle theme">🌓</button>
+    <a href="donate.html" class="btn primary">Donate</a>
+  </div>
+</header>
+<main>
+
+<section class="section container">
+  <h1 class="section-title">Contact Us</h1>
+  <div class="grid two">
+    <form class="card" data-form="contact">
+      <label>Name<input name="name" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Message<textarea name="message" rows="4" required></textarea></label>
+      <button class="btn primary" type="submit">Send</button>
+    </form>
+    <div class="card">
+      <h3>Visit</h3>
+      <p>22 Community Lane, Care City</p>
+      <!-- ✅ Real interactive map -->
+      <div class="mapbox" style="height:260px; border-radius: var(--radius); overflow:hidden;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.152243354507!2d72.8777!3d19.0726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c630b8f7e6ed%3A0xe87e8a3c4b87c1f!2sCare%20City!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <p class="form-hint">Interactive Google Map</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>About</h4>
+      <p>We rescue surplus food, fund fresh meals, and empower volunteers to serve communities with dignity.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="request-help.html">Request Help</a></li>
+        <li><a href="impact.html">Impact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter" data-form="newsletter">
+        <label class="sr-only" for="newsletter-email">Email</label>
+        <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required />
+        <button class="btn secondary" type="submit">Subscribe</button>
+        <p class="form-hint">No spam. Unsubscribe anytime.</p>
+      </form>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>📍 22 Community Lane, Care City<br/>☎️ +91 99999 00000<br/>✉️ hello@nourishhope.org</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram" class="chip">Instagram</a>
+        <a href="#" aria-label="Twitter" class="chip">Twitter</a>
+        <a href="#" aria-label="LinkedIn" class="chip">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <div class="progress-wrap">
+      <div class="progress-bar" id="scroll-progress"></div>
+    </div>
+    <p>© <span data-year></span> NourishHope · Built with kindness</p>
+  </div>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<button id="to-top" class="to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

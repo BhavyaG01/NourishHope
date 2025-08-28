@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events · NourishHope</title>
+  <meta name="description" content="NourishHope — a food charity connecting donors, volunteers, and communities to reduce hunger and food waste." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script defer src="script.js"></script>
+</head>
+<body class="theme-dark">
+<div id="page-transition" class="page-transition"></div>
+<canvas id="bg-particles" aria-hidden="true"></canvas>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="NourishHope home">
+    <img src="assets/logo.svg" alt="" class="logo" />
+    <span class="brand-text">NourishHope</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul id="nav-menu" class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="request-help.html">Request Help</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <button id="theme-toggle" class="btn ghost small" aria-label="Toggle theme">🌓</button>
+    <a href="donate.html" class="btn primary">Donate</a>
+  </div>
+</header>
+<main>
+
+<section class="section container">
+  <h1 class="section-title">Events & Drives</h1>
+  <p class="lead">Filter by location and month. Click an event to save it.</p>
+
+  <div class="filters">
+    <input type="month" id="event-month" />
+    <select id="event-city">
+      <option value="">All Cities</option>
+      <option>Mumbai</option><option>Delhi</option><option>Bengaluru</option><option>Kolkata</option>
+    </select>
+  </div>
+
+  <div class="timeline" id="event-timeline">
+    <!-- Events populated by JS -->
+  </div>
+</section>
+
+<section id="kitchen" class="section alt container">
+  <h2 class="section-title">Kitchen Drive Details</h2>
+  <div class="card">
+    <p>Prepare khichdi and dal for 500 people. Hygiene training provided.</p>
+    <ul class="bullets">
+      <li>Shifts: 8–11am, 12–3pm, 5–8pm</li>
+      <li>Location: Community Kitchen, Lane 4</li>
+      <li>Lead: Priya (+91 98xxxxxxx)</li>
+    </ul>
+    <a href="volunteer.html" class="btn secondary">Volunteer</a>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>About</h4>
+      <p>We rescue surplus food, fund fresh meals, and empower volunteers to serve communities with dignity.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="request-help.html">Request Help</a></li>
+        <li><a href="impact.html">Impact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter" data-form="newsletter">
+        <label class="sr-only" for="newsletter-email">Email</label>
+        <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required />
+        <button class="btn secondary" type="submit">Subscribe</button>
+        <p class="form-hint">No spam. Unsubscribe anytime.</p>
+      </form>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>📍 22 Community Lane, Care City<br/>☎️ +91 99999 00000<br/>✉️ hello@nourishhope.org</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram" class="chip">Instagram</a>
+        <a href="#" aria-label="Twitter" class="chip">Twitter</a>
+        <a href="#" aria-label="LinkedIn" class="chip">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <div class="progress-wrap">
+      <div class="progress-bar" id="scroll-progress"></div>
+    </div>
+    <p>© <span data-year></span> NourishHope · Built with kindness</p>
+  </div>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<button id="to-top" class="to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

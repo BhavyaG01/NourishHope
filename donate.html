@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate · NourishHope</title>
+  <meta name="description" content="NourishHope — a food charity connecting donors, volunteers, and communities to reduce hunger and food waste." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script defer src="script.js"></script>
+</head>
+<body class="theme-dark">
+<div id="page-transition" class="page-transition"></div>
+<canvas id="bg-particles" aria-hidden="true"></canvas>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="NourishHope home">
+    <img src="assets/logo.svg" alt="" class="logo" />
+    <span class="brand-text">NourishHope</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul id="nav-menu" class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="request-help.html">Request Help</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <button id="theme-toggle" class="btn ghost small" aria-label="Toggle theme">🌓</button>
+    <a href="donate.html" class="btn primary">Donate</a>
+  </div>
+</header>
+<main>
+
+<section class="section container">
+  <h1 class="section-title">Donate to NourishHope</h1>
+  <p class="lead">Choose your amount, see your impact in real time, and track your giving history locally on your device.</p>
+
+  <div class="grid donate-grid">
+    <div class="card reveal-up">
+      <h3>Your Donation</h3>
+      <label for="donation-amount">Amount (₹)</label>
+      <input id="donation-amount" type="range" min="50" max="5000" value="250" step="50" data-donation-range />
+      <div class="donation-amount-display"><span data-donation-display>₹250</span></div>
+      <div class="donation-presets">
+        <button data-donate="100">₹100</button>
+        <button data-donate="250">₹250</button>
+        <button data-donate="500">₹500</button>
+        <button data-donate="1000">₹1000</button>
+      </div>
+      <label for="donation-frequency">Frequency</label>
+      <select id="donation-frequency" data-donation-frequency>
+        <option value="one-time">One-time</option>
+        <option value="monthly">Monthly</option>
+      </select>
+      <button class="btn primary large" data-checkout>Proceed to Donate</button>
+      <p class="form-hint">Mock checkout — stores in your local history.</p>
+    </div>
+
+    <div class="card reveal-up delay-1">
+      <h3>Impact Preview</h3>
+      <ul class="impact-list">
+        <li>Meals funded: <strong data-impact-meals>0</strong></li>
+        <li>Nutrition kits: <strong data-impact-kits>0</strong></li>
+        <li>Rescues powered: <strong data-impact-rescues>0</strong></li>
+      </ul>
+      <div class="progress">
+        <div class="progress-fill" data-goal-progress style="width: 0%"></div>
+      </div>
+      <p class="form-hint">Goal: ₹2,00,000 this month</p>
+    </div>
+
+    <div class="card reveal-up delay-2">
+      <h3>Your History</h3>
+      <div class="history" data-history></div>
+      <button class="btn ghost small" data-clear-history>Clear History</button>
+    </div>
+  </div>
+</section>
+
+<section class="section alt container">
+  <h2 class="section-title">Corporate & In-kind</h2>
+  <div class="grid two">
+    <div class="card">
+      <h3>CSR Partnerships</h3>
+      <p>Co-create programs, adopt kitchens, or match employee giving.</p>
+      <button class="btn secondary" data-open-modal="#csr-modal">Get in Touch</button>
+    </div>
+    <div class="card">
+      <h3>Food & Supplies</h3>
+      <p>Donate dry rations, packaging, vessels, or fuel coupons.</p>
+      <button class="btn secondary" data-open-modal="#inkind-modal">Offer Support</button>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="csr-modal" aria-hidden="true" role="dialog" aria-labelledby="csr-title">
+  <div class="modal-content">
+    <h3 id="csr-title">CSR Partnerships</h3>
+    <form data-form="csr">
+      <label>Company Name<input name="company" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Message<textarea name="message" rows="4" required></textarea></label>
+      <div class="modal-actions">
+        <button type="submit" class="btn primary">Send</button>
+        <button type="button" class="btn ghost" data-close-modal>Close</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="inkind-modal" aria-hidden="true" role="dialog" aria-labelledby="inkind-title">
+  <div class="modal-content">
+    <h3 id="inkind-title">In-kind Donations</h3>
+    <form data-form="inkind">
+      <label>Organization<input name="org" required></label>
+      <label>Contact Email<input type="email" name="email" required></label>
+      <label>Items<textarea name="items" rows="3" placeholder="e.g., 50kg rice, 200 boxes" required></textarea></label>
+      <div class="modal-actions">
+        <button type="submit" class="btn primary">Send</button>
+        <button type="button" class="btn ghost" data-close-modal>Close</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>About</h4>
+      <p>We rescue surplus food, fund fresh meals, and empower volunteers to serve communities with dignity.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="request-help.html">Request Help</a></li>
+        <li><a href="impact.html">Impact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <form class="newsletter" data-form="newsletter">
+        <label class="sr-only" for="newsletter-email">Email</label>
+        <input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required />
+        <button class="btn secondary" type="submit">Subscribe</button>
+        <p class="form-hint">No spam. Unsubscribe anytime.</p>
+      </form>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>📍 22 Community Lane, Care City<br/>☎️ +91 99999 00000<br/>✉️ hello@nourishhope.org</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram" class="chip">Instagram</a>
+        <a href="#" aria-label="Twitter" class="chip">Twitter</a>
+        <a href="#" aria-label="LinkedIn" class="chip">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <div class="progress-wrap">
+      <div class="progress-bar" id="scroll-progress"></div>
+    </div>
+    <p>© <span data-year></span> NourishHope · Built with kindness</p>
+  </div>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<button id="to-top" class="to-top" aria-label="Back to top">↑</button>
+</body>
+</html>
